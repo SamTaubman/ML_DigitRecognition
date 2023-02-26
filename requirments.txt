@@ -1,1 +1,6 @@
-
+pytorch
+pandas
+numpy
+streamlit
+plotly
+SpeechRecognition
