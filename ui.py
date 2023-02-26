@@ -12,16 +12,15 @@ import gc
 #Enable garbage collection
 gc.enable()
 
+def main():
+    st.set_page_config(page_title="Handwritten Digit Recognition", initial_sidebar_state="expanded")
+    st.title('Digit Recognizer')
+    st.write("Have a neural network recognize any digit you write!")
+    st.markdown('### Draw a digit !')
 
-st.set_page_config(page_title="Handwritten Digit Recognition", initial_sidebar_state="expanded")
-st.title('Digit Recognizer')
-st.write("Have a neural network recognize any digit you write!")
-st.markdown('### Draw a digit !')
-
-
-st.sidebar.header("Configuration")
-stroke_width = st.sidebar.slider("Brush width: ", 10, 30, 20)
-drawing_mode = st.sidebar.checkbox("Drawing mode ?", True)
+    st.sidebar.header("Configuration")
+    stroke_width = st.sidebar.slider("Brush width: ", 10, 30, 20)
+    drawing_mode = st.sidebar.checkbox("Drawing mode ?", True)
 
 
 # To plot classes and probabilitites
@@ -121,3 +120,6 @@ if canvas_result.image_data is not None:
             del img_gray, image_transformed , class_label, confidence, df
 
 gc.collect()
+
+if __name__ == "__main__":
+    main()
