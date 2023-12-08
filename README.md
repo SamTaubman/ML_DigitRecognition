@@ -9,4 +9,5 @@ MachineLearning_DigitRecognition is a neural network trained to perform digit re
 
 # Use Case
 Below is an example of the interface.
+
 ![](https://user-images.githubusercontent.com/51927159/235236860-1ae46d54-3e74-4acd-b8f3-8a15b63bfdce.gif)
